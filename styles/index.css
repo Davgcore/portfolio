@@ -11,7 +11,8 @@ html{
 }
 
 #inicio{
-    background:linear-gradient(rgb(179, 179, 212), rgb(212, 212, 245));
+    background: rgb(131,77,167);
+    background: linear-gradient(0deg, rgba(131,77,167,0.7791491596638656) 31%, rgba(73,6,93,0.7483368347338936) 65%);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -104,9 +105,29 @@ header .content-header nav ul li a{
     text-align: center;
 }
 
-.presentation span{
-    font-size: 25px;
-    background-color: #ff5080;
+.presentation p{
+    font-size: 55px;
+    border-right: .15em solid #18BDEC;
+    animation: blink 1s steps(1) infinite;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .description{
@@ -283,7 +304,8 @@ header .content-header nav ul li a{
 }
 
 .container-skills{
-    background: linear-gradient(#eb5a5acc, rgba(33,16,16.8));
+    background: rgb(131,77,167);
+    background: linear-gradient(0deg, rgba(131,77,167,0.7791491596638656) 31%, rgba(73,6,93,0.7483368347338936) 65%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -395,7 +417,6 @@ header .content-header nav ul li a{
 }
 
 #portfolio{
-    max-width: 100vh;
     padding: 100px 0;
     margin: auto;
 }
@@ -411,9 +432,9 @@ header .content-header nav ul li a{
 
 #portfolio .lista{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 30px 0;
-    max-width: 100vh;
+    padding: 1rem;
 }
 
 #portfolio .lista .project{
@@ -458,7 +479,7 @@ header .content-header nav ul li a{
 
 #contact .tittle-contact{
     margin-bottom: 20px;
-    text-align: c;
+    text-align: center;
     font-size: 22px;
     text-transform: uppercase;
     color: #111135;
@@ -611,12 +632,13 @@ footer a{
     }
 
     #portfolio .lista {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     #portfolio .lista .project{
         margin: 10px auto;
-        max-width: 78vh;
+        max-width: auto;
     }
 
     #contact{
